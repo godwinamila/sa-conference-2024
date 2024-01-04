@@ -20,4 +20,9 @@ service / on new http:Listener(9091) {
         string ratesJson = check backendClient->get("/greeting?name=" + name);
         return ratesJson;
     }
+    resource function post create() returns string|error {
+        // Send a response back to the caller.
+            
+        return "Creation successful!!";
+    }
 }
